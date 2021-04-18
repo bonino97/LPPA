@@ -1,6 +1,8 @@
-# LPPA
-Repositorio utilizado para administrar los proyectos de la Catedra - Lenguajes de Programacion para la Administracion - 2021.
-Alumno: Juan Cruz Lombardo Bonino
+# Descripcion
+
+[x] Repositorio utilizado para administrar los proyectos de la Catedra - ***Lenguajes de Programacion para la Administracion***
+
+- Alumno: Juan Cruz Lombardo Bonino
 
 ### Primer Proyecto -> Damas.
 
