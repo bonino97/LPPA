@@ -1,6 +1,6 @@
 # Descripcion
 
-[x] Repositorio utilizado para administrar los proyectos de la Catedra - ***Lenguajes de Programacion para la Administracion***
+- Repositorio utilizado para administrar los proyectos de la Catedra - ***Lenguajes de Programacion para la Administracion***
 
 - Alumno: Juan Cruz Lombardo Bonino
 
