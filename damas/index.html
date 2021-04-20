@@ -3,152 +3,156 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="./styles.css" />
     <title>Damas</title>
   </head>
   <body>
     <div class="container">
-      <table class="board">
-        <!-- <tr>
-          <th>1</th>
-          <th>2</th>
-          <th>3</th>
-          <th>4</th>
-          <th>5</th>
-          <th>6</th>
-          <th>7</th>
-          <th>8</th>
-        </tr> -->
-        <tr>
-          <td><div class="item-white"></div></td>
-          <td>
-            <div class="item-black"><div class="white-piece"></div></div>
-          </td>
-          <td><div class="item-white"></div></td>
-          <td>
-            <div class="item-black"><div class="white-piece"></div></div>
-          </td>
-          <td><div class="item-white"></div></td>
-          <td>
-            <div class="item-black"><div class="white-piece"></div></div>
-          </td>
-          <td><div class="item-white"></div></td>
-          <td>
-            <div class="item-black"><div class="white-piece"></div></div>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <div class="item-black"><div class="white-piece"></div></div>
-          </td>
-          <td><div class="item-white"></div></td>
-          <td>
-            <div class="item-black"><div class="white-piece"></div></div>
-          </td>
-          <td><div class="item-white"></div></td>
-          <td>
-            <div class="item-black"><div class="white-piece"></div></div>
-          </td>
-          <td><div class="item-white"></div></td>
-          <td>
-            <div class="item-black"><div class="white-piece"></div></div>
-          </td>
-          <td><div class="item-white"></div></td>
-        </tr>
-        <tr>
-          <td><div class="item-white"></div></td>
-          <td>
-            <div class="item-black"><div class="white-piece"></div></div>
-          </td>
-          <td><div class="item-white"></div></td>
-          <td>
-            <div class="item-black"><div class="white-piece"></div></div>
-          </td>
-          <td><div class="item-white"></div></td>
-          <td>
-            <div class="item-black"><div class="white-piece"></div></div>
-          </td>
-          <td><div class="item-white"></div></td>
-          <td>
-            <div class="item-black"><div class="white-piece"></div></div>
-          </td>
-        </tr>
-        <tr>
-          <td><div class="item-black"></div></td>
-          <td><div class="item-white"></div></td>
-          <td><div class="item-black"></div></td>
-          <td><div class="item-white"></div></td>
-          <td><div class="item-black"></div></td>
-          <td><div class="item-white"></div></td>
-          <td><div class="item-black"></div></td>
-          <td><div class="item-white"></div></td>
-        </tr>
-        <tr>
-          <td><div class="item-white"></div></td>
-          <td><div class="item-black"></div></td>
-          <td><div class="item-white"></div></td>
-          <td><div class="item-black"></div></td>
-          <td><div class="item-white"></div></td>
-          <td><div class="item-black"></div></td>
-          <td><div class="item-white"></div></td>
-          <td><div class="item-black"></div></td>
-        </tr>
-        <tr>
-          <td>
-            <div class="item-black"><div class="red-piece"></div></div>
-          </td>
-          <td><div class="item-white"></div></td>
-          <td>
-            <div class="item-black"><div class="red-piece"></div></div>
-          </td>
-          <td><div class="item-white"></div></td>
-          <td>
-            <div class="item-black"><div class="red-piece"></div></div>
-          </td>
-          <td><div class="item-white"></div></td>
-          <td>
-            <div class="item-black"><div class="red-piece"></div></div>
-          </td>
-          <td><div class="item-white"></div></td>
-        </tr>
-        <tr>
-          <td><div class="item-white"></div></td>
-          <td>
-            <div class="item-black"><div class="red-piece"></div></div>
-          </td>
-          <td><div class="item-white"></div></td>
-          <td>
-            <div class="item-black"><div class="red-piece"></div></div>
-          </td>
-          <td><div class="item-white"></div></td>
-          <td>
-            <div class="item-black"><div class="red-piece"></div></div>
-          </td>
-          <td><div class="item-white"></div></td>
-          <td>
-            <div class="item-black"><div class="red-piece"></div></div>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <div class="item-black"><div class="red-piece"></div></div>
-          </td>
-          <td><div class="item-white"></div></td>
-          <td>
-            <div class="item-black"><div class="red-piece"></div></div>
-          </td>
-          <td><div class="item-white"></div></td>
-          <td>
-            <div class="item-black"><div class="red-piece"></div></div>
-          </td>
-          <td><div class="item-white"></div></td>
-          <td>
-            <div class="item-black"><div class="red-piece"></div></div>
-          </td>
-          <td><div class="item-white"></div></td>
-        </tr>
-      </table>
+      <div class="navbar">
+        <nav class="nav-container">
+          <a class="font-size-title" href="#">Mini Damas</a>
+          <a class="font-size-nav" href="#">DAMAS</a>
+          <a class="font-size-nav" href="#">QUE ES?</a>
+        </nav>
+      </div>
+      <section class="content">
+        <table class="board">
+          <tr>
+            <td><div class="item-white"></div></td>
+            <td>
+              <div class="item-black"><div class="white-piece"></div></div>
+            </td>
+            <td><div class="item-white"></div></td>
+            <td>
+              <div class="item-black"><div class="white-piece"></div></div>
+            </td>
+            <td><div class="item-white"></div></td>
+            <td>
+              <div class="item-black"><div class="white-piece"></div></div>
+            </td>
+            <td><div class="item-white"></div></td>
+            <td>
+              <div class="item-black"><div class="white-piece"></div></div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="item-black"><div class="white-piece"></div></div>
+            </td>
+            <td><div class="item-white"></div></td>
+            <td>
+              <div class="item-black"><div class="white-piece"></div></div>
+            </td>
+            <td><div class="item-white"></div></td>
+            <td>
+              <div class="item-black"><div class="white-piece"></div></div>
+            </td>
+            <td><div class="item-white"></div></td>
+            <td>
+              <div class="item-black"><div class="white-piece"></div></div>
+            </td>
+            <td><div class="item-white"></div></td>
+          </tr>
+          <tr>
+            <td><div class="item-white"></div></td>
+            <td>
+              <div class="item-black"><div class="white-piece"></div></div>
+            </td>
+            <td><div class="item-white"></div></td>
+            <td>
+              <div class="item-black"><div class="white-piece"></div></div>
+            </td>
+            <td><div class="item-white"></div></td>
+            <td>
+              <div class="item-black"><div class="white-piece"></div></div>
+            </td>
+            <td><div class="item-white"></div></td>
+            <td>
+              <div class="item-black"><div class="white-piece"></div></div>
+            </td>
+          </tr>
+          <tr>
+            <td><div class="item-black"></div></td>
+            <td><div class="item-white"></div></td>
+            <td><div class="item-black"></div></td>
+            <td><div class="item-white"></div></td>
+            <td><div class="item-black"></div></td>
+            <td><div class="item-white"></div></td>
+            <td><div class="item-black"></div></td>
+            <td><div class="item-white"></div></td>
+          </tr>
+          <tr>
+            <td><div class="item-white"></div></td>
+            <td><div class="item-black"></div></td>
+            <td><div class="item-white"></div></td>
+            <td><div class="item-black"></div></td>
+            <td><div class="item-white"></div></td>
+            <td><div class="item-black"></div></td>
+            <td><div class="item-white"></div></td>
+            <td><div class="item-black"></div></td>
+          </tr>
+          <tr>
+            <td>
+              <div class="item-black"><div class="red-piece"></div></div>
+            </td>
+            <td><div class="item-white"></div></td>
+            <td>
+              <div class="item-black"><div class="red-piece"></div></div>
+            </td>
+            <td><div class="item-white"></div></td>
+            <td>
+              <div class="item-black"><div class="red-piece"></div></div>
+            </td>
+            <td><div class="item-white"></div></td>
+            <td>
+              <div class="item-black"><div class="red-piece"></div></div>
+            </td>
+            <td><div class="item-white"></div></td>
+          </tr>
+          <tr>
+            <td><div class="item-white"></div></td>
+            <td>
+              <div class="item-black"><div class="red-piece"></div></div>
+            </td>
+            <td><div class="item-white"></div></td>
+            <td>
+              <div class="item-black"><div class="red-piece"></div></div>
+            </td>
+            <td><div class="item-white"></div></td>
+            <td>
+              <div class="item-black"><div class="red-piece"></div></div>
+            </td>
+            <td><div class="item-white"></div></td>
+            <td>
+              <div class="item-black"><div class="red-piece"></div></div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="item-black"><div class="red-piece"></div></div>
+            </td>
+            <td><div class="item-white"></div></td>
+            <td>
+              <div class="item-black"><div class="red-piece"></div></div>
+            </td>
+            <td><div class="item-white"></div></td>
+            <td>
+              <div class="item-black"><div class="red-piece"></div></div>
+            </td>
+            <td><div class="item-white"></div></td>
+            <td>
+              <div class="item-black"><div class="red-piece"></div></div>
+            </td>
+            <td><div class="item-white"></div></td>
+          </tr>
+        </table>
+      </section>
+      <div class="button-group">
+        <button class="button-style">
+          Nueva Partida
+        </button>
+      </div>
     </div>
   </body>
 </html>
