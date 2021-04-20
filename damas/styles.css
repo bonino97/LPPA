@@ -136,4 +136,5 @@ body {
 
 .breadcrumb > li {
   display: inline-block;
+  color: gray;
 }
