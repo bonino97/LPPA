@@ -1,7 +1,6 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
   background-color: #dddddd;
-  font-size: 62.5%;
 }
 
 .content {
@@ -47,7 +46,7 @@ body {
 }
 
 .navbar {
-  margin-bottom: 3rem;
+  margin-bottom: 1rem;
   padding-right: 0;
   padding-left: 0;
   background-color: #d4707a;
@@ -67,19 +66,20 @@ body {
   padding: 1rem;
   color: white;
   text-decoration: none;
-  text-transform: uppercase;
   text-align: center;
 }
 
 .font-size-title {
-  font-size: large;
+  font-size: 1.26rem;
+  margin: auto;
 }
 
 .font-size-nav {
   font-size: medium;
+  margin: auto;
 }
 
-.button-group {
+.button-grid {
   margin-top: 20px;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -89,7 +89,6 @@ body {
 
 .button-style {
   border-radius: 12px;
-  -webkit-border-radius: 12px;
   background: linear-gradient(#3d94d1, #57aeea);
   background-color: lightBlue;
   display: inline-block;
@@ -97,13 +96,11 @@ body {
   margin-top: 20px;
   padding: 10px 45px;
   vertical-align: middle;
-  font-family: Arial;
   color: #fff;
   border: 1px solid #84c5f3;
   text-shadow: 0 0 3px #333333;
   cursor: pointer;
   box-shadow: 0 0 8px 1px #888888;
-  -webkit-box-shadow: 0 0 8px 1px #888888;
   width: 250px;
   height: 50px;
 }
@@ -120,4 +117,23 @@ body {
     width: 500px;
     height: 100%;
   }
+}
+
+.breadcrumb-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100%, 0fr));
+  justify-items: center;
+}
+
+.breadcrumb {
+  width: 90%;
+  padding: 4px 15px;
+  margin: 0 0 15px 0;
+  list-style: none;
+  background-color: #f5f5f5;
+  border-radius: 4px;
+}
+
+.breadcrumb > li {
+  display: inline-block;
 }
