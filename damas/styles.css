@@ -52,7 +52,7 @@ body {
   background-color: #d4707a;
 }
 
-.navbar nav {
+.navbar div {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px, 0fr));
 }
