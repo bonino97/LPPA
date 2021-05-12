@@ -1,11 +1,15 @@
+/* Initial Configuration */
 html {
   box-sizing: border-box;
 }
+
 *,
 *:before,
 *:after {
   box-sizing: inherit;
 }
+
+/* Initial Configuration */
 body {
   font-family: 'Yanone Kaffeesatz', sans-serif;
   font-weight: 200;
@@ -20,6 +24,7 @@ a:hover {
   text-decoration: none;
 }
 
+/* Wrapper */
 .wrapper {
   display: flex;
   flex-direction: column;
@@ -27,13 +32,15 @@ a:hover {
   justify-content: space-between;
   min-height: 100vh;
 }
+
+/* Header */
 .header {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   padding-top: 2rem;
-  background: #3b4346 url(../img/bg01.jpg);
+  background: #3b4346;
   width: 100vw;
 }
 .header .navbar {
@@ -42,7 +49,6 @@ a:hover {
   justify-content: center;
   align-items: center;
   text-shadow: -1px -1px 1px rgb(0 0 0 / 75%);
-  /*min-width: 100vw;*/
 }
 .header .navbar .title {
   padding-right: 13rem;
@@ -53,6 +59,7 @@ a:hover {
   font-weight: 300;
 }
 
+/* Nav */
 .nav {
   display: flex;
   flex-direction: row;
@@ -104,6 +111,8 @@ a:hover {
   margin: 3px auto;
   height: 2px;
 }
+
+/* Section */
 .section {
   display: flex;
   flex-direction: row-reverse;
@@ -146,18 +155,18 @@ a:hover {
   font-weight: 3;
 }
 
+/* Cards */
 .cards {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   min-width: 100vw;
-  background: #353d40 url(../img/bg02.jpg);
+  background: #353d40;
   padding: 3rem 0;
   border-top: solid 1px #222628;
   box-shadow: inset 0px 1px 0px 0px #3e484a;
 }
-
 .cards .cards_container {
   display: flex;
   flex-direction: row;
@@ -165,12 +174,10 @@ a:hover {
   align-items: center;
   width: 5rem;
 }
-
 .cards .cards_container .s1,
 .cards .cards_container .s2 {
   display: flex;
 }
-
 .card {
   display: flex;
   flex-direction: column;
@@ -180,7 +187,6 @@ a:hover {
   color: #ffffff;
   padding: 0 1rem;
 }
-
 .card h3 {
   color: white;
   font-size: 1.4rem;
@@ -201,6 +207,7 @@ a:hover {
   border: 10px solid white;
 }
 
+/* Important */
 .important {
   display: flex;
   flex-direction: row;
@@ -253,6 +260,7 @@ a:hover {
   border-bottom: none;
 }
 
+/* Informative */
 .informative {
   width: 30rem;
   padding-right: 6.5rem;
@@ -269,6 +277,8 @@ a:hover {
   color: #212f35;
   font-weight: 300;
 }
+
+/* Footer */
 footer {
   border-top: solid 1px #b5bec3;
   width: 100%;
@@ -289,6 +299,7 @@ footer a:hover {
   text-decoration: none;
 }
 
+/* One Column Page */
 .onecolumn {
   display: flex;
   flex-direction: row;
@@ -327,6 +338,7 @@ footer a:hover {
   line-height: 2;
 }
 
+/* ThreeColumn Page */
 .threecolumn {
   display: flex;
   flex-direction: row;
@@ -401,6 +413,7 @@ footer a:hover {
   text-decoration: none;
 }
 
+/* Forced media-queries */
 @media (max-width: 1200px) {
   .header {
     padding: 0;
