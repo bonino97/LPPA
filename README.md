@@ -20,3 +20,20 @@
 - Este proyecto se realizo para aprender a manipular flex en CSS, para poder dar diseño a paginas Responsive.
 - Clonamos este sitio: https://html5up.net/uploads/demos/halcyonic/
 - Link donde se ira actualizando: https://bonino97.github.io/LPPA/flex/index.html
+
+
+### Cuarto Proyecto -> Flex-v2 [Recuperatorio]
+#### Description: 
+- Este proyecto se realizo para aprender a manipular flex en CSS, para poder dar diseño a paginas Responsive.
+- Clonamos este sitio: https://html5up.net/uploads/demos/minimaxing/
+- Link donde se ira actualizando: https://bonino97.github.io/LPPA/flex-v2/index.html
+
+### Quinto Proyecto -> Javascript
+#### Description: 
+- Este proyecto se realizo para aprender lo basico de Javascript.
+- Link del Repositorio: https://github.com/bonino97/LPPA/tree/master/javascript
+
+### Sexto Proyecto -> Javascript-v2
+#### Description: 
+- Este proyecto se realizo para aprender un poco mas de Javascript.
+- Link del Repositorio: https://github.com/bonino97/LPPA/tree/master/javascript-v2
