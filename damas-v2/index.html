@@ -2,28 +2,22 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="./styles.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Damas</title>
+    <link
+      rel="stylesheet"
+      href="https://necolas.github.io/normalize.css/8.0.1/normalize.css"
+    />
+    <link rel="stylesheet" href="css/app.css" />
   </head>
   <body>
-    <div class="container">
-      <nav class="navbar">
-        <div class="nav-container">
-          <a class="font-size-title" href="#">Mini Damas</a>
-          <a class="font-size-nav" href="#">DAMAS</a>
-          <a class="font-size-nav" href="#">QUE ES?</a>
-        </div>
-      </nav>
-      <header class="breadcrumb-grid">
-        <ul class="breadcrumb">
-          <li><a href="/">Mini Damas</a></li>
-          /
-          <li class="active">Portada</li>
-        </ul>
-      </header>
+    <header class="site-header">
+      <img src="img/logo.svg" alt="site logo" class="logo" />
+    </header>
+    <main class="form-login container">
       <section class="content">
+        <legend>Play Game</legend>
         <table class="board">
           <tr>
             <td><div class="item-white"></div></td>
@@ -154,10 +148,62 @@
             <td><div class="item-white"></div></td>
           </tr>
         </table>
+        <div class="submit">
+          <input type="submit" value="Iniciar Sesion" />
+        </div>
+        <div class="actions">
+          <div class="remember">
+            <input type="checkbox" />
+            <label> Remember Me</label>
+          </div>
+          <div class="help">
+            <a href="#">Need help?</a>
+          </div>
+        </div>
       </section>
-      <footer class="button-grid">
-        <button class="button-style">Nueva Partida</button>
-      </footer>
-    </div>
+      <!-- <form action="#">
+        <legend>Play Game</legend>
+        <div class="field">
+          <input type="text" id="user" />
+          <label for="user">Email</label>
+        </div>
+        <div class="field">
+          <input type="password" id="password" />
+          <label for="password">Password</label>
+        </div>
+        <div class="submit">
+          <input type="submit" value="Iniciar Sesion" />
+        </div>
+        <div class="actions">
+          <div class="remember">
+            <input type="checkbox" />
+            <label> Remember Me</label>
+          </div>
+          <div class="help">
+            <a href="#">Need help?</a>
+          </div>
+        </div>
+      </form> -->
+      <div class="bottom-content">
+        <a href="#" class="submit"> Login with Facebook </a>
+        <p class="new-user">First time on Netflix?<a href="#">Subscribe!</a></p>
+      </div>
+    </main>
+    <footer class="site-footer">
+      <div class="container">
+        <p>Questions? Call 414141414141</p>
+        <nav class="footer-menu">
+          <a href="">Gift Terms</a>
+          <a href="">Use Terms</a>
+          <a href="">Privacy Declaration</a>
+        </nav>
+        <select class="language">
+          <option value="eng">English</option>
+          <option value="eng">Spanish</option>
+        </select>
+      </div>
+    </footer>
+
+    <script src="js/scripts.js"></script>
   </body>
 </html>
