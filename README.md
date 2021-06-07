@@ -13,7 +13,7 @@
 ### Segundo Proyecto -> Damas v2
 #### Description: 
 - En este proyecto, debemos continuar con el juego de Damas, pero realizando una version Custom personal. Para ir llevando a cabo durante el año.
-- Link: 
+- Link: https://bonino97.github.io/LPPA/damas-v2/index.html
 
 ### Tercer Proyecto -> Flex
 #### Description: 
@@ -35,5 +35,18 @@
 
 ### Sexto Proyecto -> Javascript-v2
 #### Description: 
-- Este proyecto se realizo para aprender un poco mas de Javascript.
+- Continuamos con el aprendizaje del proyecto anterior.
 - Link del Repositorio: https://github.com/bonino97/LPPA/tree/master/javascript-v2
+
+------------------------------------------------------------------------------------------------------------------------------------------------------
+
+### Damas v2
+- A partir de ahora, continuaremos con las diferentes versiones del juego "Damas".
+- En el Proyecto 2. Realizamos una version Customizada del Proyecto 1, es decir, con CSS le dimos un estilo personal al juego.
+- Link del Proyecto: https://github.com/bonino97/LPPA/tree/master/damas-v2
+- Website: https://bonino97.github.io/LPPA/damas-v2/index.html
+- 
+#### Releases: 
+- v2.0.1 -> Comenzamos a añadirle JavaScript.
+- v2.0.2 -> Agregamos a manipular el DOM, para lograr mover las fichas.
+
