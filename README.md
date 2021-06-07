@@ -45,7 +45,7 @@
 - En el Proyecto 2. Realizamos una version Customizada del Proyecto 1, es decir, con CSS le dimos un estilo personal al juego.
 - Link del Proyecto: https://github.com/bonino97/LPPA/tree/master/damas-v2
 - Website: https://bonino97.github.io/LPPA/damas-v2/index.html
-- 
+
 #### Releases: 
 - v2.0.1 -> Comenzamos a añadirle JavaScript.
 - v2.0.2 -> Agregamos a manipular el DOM, para lograr mover las fichas.
