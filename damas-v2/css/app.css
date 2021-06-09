@@ -39,7 +39,6 @@ a:hover {
 }
 
 .container .board {
-  border: 3px solid gray;
   border-spacing: 0px !important;
   overflow-x: auto;
   display: -webkit-box;

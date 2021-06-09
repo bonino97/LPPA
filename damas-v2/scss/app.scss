@@ -39,7 +39,6 @@ a {
     margin: 0 auto;
 
     .board {
-        border: 3px solid gray;
         border-spacing: 0px !important;
         overflow-x: auto;
         display: flex;
@@ -157,7 +156,7 @@ section {
     .submit {
         display: flex;
         margin-top: 2rem;
-
+        
         input[type="submit"] {
             @include button($primary, $white);
 
