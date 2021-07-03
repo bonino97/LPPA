@@ -114,6 +114,27 @@ function drawQueen(p, color, selected) {
   drawingContext.stroke();
 }
 
+function getCursorPosition(e) {
+  let x;
+  let y;
+  if (e.pageX != undefined && e.pageY != undefined) {
+    x = e.pageX;
+    y = e.pageY;
+  } else {
+    x =
+      e.clientX +
+      document.body.scrollLeft +
+      document.documentElement.scrollLeft;
+    y =
+      e.clientY + document.body.scrollTop + document.documentElement.scrollTop;
+  }
+  x -= canvasElement.offsetLeft;
+  y -= canvasElement.offsetTop;
+  x = Math.min(x, boardWidth * pieceWidth);
+  y = Math.min(y, boardHeight * pieceHeight);
+  let cell = new Box(Math.floor(y / pieceHeight), Math.floor(x / pieceWidth));
+  return cell;
+}
 function clickManager(e) {
   let row = getCursorPosition(e);
   for (let i = 0; i < numPieces; i++) {
