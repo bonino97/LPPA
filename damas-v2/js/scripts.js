@@ -3,6 +3,7 @@
 const inputs = document.querySelectorAll('form .field input');
 
 // Listener in inputs.
+// Dont forget to use on register.
 
 inputs.forEach((input) => {
   input.addEventListener('blur', validateInput);
