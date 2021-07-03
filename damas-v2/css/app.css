@@ -255,6 +255,28 @@ form .field input:focus + label {
   top: 0.5rem;
 }
 
+form .field textarea {
+  overflow: auto;
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  padding: 1.3rem 1rem 0.7rem 1rem;
+  border: none;
+  background-color: #454545;
+  border-radius: 5px;
+  color: #ffffff;
+}
+
+form .field textarea:focus {
+  background-color: #454545;
+  outline: none;
+}
+
+form .field textarea:focus + label {
+  font-size: 0.6rem;
+  top: 0.5rem;
+}
+
 form .submit {
   display: -webkit-box;
   display: -ms-flexbox;
