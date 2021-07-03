@@ -1,5 +1,3 @@
-//Initial Configuration
-
 const boardWidth = 8;
 const boardHeight = 8;
 const pieceWidth = 50;
@@ -13,16 +11,19 @@ const whitePieceColor = '#ffffff';
 let whiteTurn;
 let redTurn;
 
-let indexToDelete = -1; // Para borrar una pieza.
-let legalMoves; // Para los movimientos legales.
+let indexToDelete = -1;
+let legalMoves;
 
 let canvasElement;
 let drawingContext;
 
 let pieces = [];
 
-let numPieces = 24; // Controla las pieces metidas en memoria.
-let numMoves = 0; // Cuenta los movimientos sin que se produzca un salto.
+let numPieces = 24;
+let numMoves = 0;
+
+let isTie = false;
+let tieAgreed = false;
 
 let selectedPieceIndex;
 let selectedPieceHasMoved;
@@ -35,27 +36,24 @@ function drawBoard() {
 
   drawingContext.beginPath();
 
-  /* vertical lines */
   for (let x = 0; x <= pixelWidth; x += pieceWidth) {
     drawingContext.moveTo(0.5 + x, 0);
     drawingContext.lineTo(0.5 + x, pixelHeight);
   }
 
-  /* horizontal lines */
   for (let y = 0; y <= pixelHeight; y += pieceHeight) {
     drawingContext.moveTo(0, 0.5 + y);
     drawingContext.lineTo(pixelWidth, 0.5 + y);
   }
 
-  /* draw it! */
   drawingContext.strokeStyle = '#ccc';
   drawingContext.stroke();
 
   for (let i = 0; i < pieces.length; i++) {
     if (pieces[i] instanceof Queen) {
-      drawQueen(pieces[i], pieces[i].color, i == selectedPieceIndex);
+      drawQueen(pieces[i], pieces[i].color, i === selectedPieceIndex);
     } else {
-      drawPiece(pieces[i], pieces[i].color, i == selectedPieceIndex);
+      drawPiece(pieces[i], pieces[i].color, i === selectedPieceIndex);
     }
   }
 
