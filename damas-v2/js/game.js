@@ -80,7 +80,7 @@ function drawPiece(p, color, selected) {
   drawingContext.stroke();
 
   if (selected) {
-    drawingContext.fillStyle = '#ff0000';
+    drawingContext.fillStyle = '#e8bb54';
     drawingContext.fill();
   }
 }
@@ -101,10 +101,9 @@ function drawQueen(p, color, selected) {
   drawingContext.stroke();
 
   if (selected) {
-    drawingContext.fillStyle = '#ff0000';
+    drawingContext.fillStyle = '#e8bb54';
     drawingContext.fill();
   }
-  // Para la corona circular.
   drawingContext.beginPath();
   drawingContext.arc(x, y, radius + 2.5, 0, Math.PI * 2, false);
   drawingContext.closePath();
