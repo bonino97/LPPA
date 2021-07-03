@@ -114,6 +114,17 @@ function drawQueen(p, color, selected) {
   drawingContext.stroke();
 }
 
+function showMovement(box1, box2, jump) {
+  console.log(box1, box2, jump);
+  let movement = document.createElement('p');
+  if (whiteTurn) {
+    document.getElementById('whiteMove').appendChild(movement);
+    document.getElementById('isTurn').innerHTML = 'Red Turn';
+  } else {
+    document.getElementById('redMove').appendChild(movement);
+    document.getElementById('isTurn').innerHTML = 'White Turn';
+  }
+}
 function newGame() {
   // Reiniciamos variables.
   numMoves = 0;
