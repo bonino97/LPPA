@@ -114,6 +114,16 @@ function drawQueen(p, color, selected) {
   drawingContext.stroke();
 }
 
+function clickManager(e) {
+  let row = getCursorPosition(e);
+  for (let i = 0; i < numPieces; i++) {
+    if (pieces[i].row === row.row && pieces[i].column === row.column) {
+      clickOnPiece(i);
+      return;
+    }
+  }
+  clickOnEmptyCell(row);
+}
 function showMovement(box1, box2, jump) {
   console.log(box1, box2, jump);
   let movement = document.createElement('p');
