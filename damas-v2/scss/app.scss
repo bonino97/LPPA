@@ -139,6 +139,31 @@ section {
     }
   }
 
+  .options-content {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+
+    .list-button {
+      background-color: $primary;
+      color: $white;
+      display: block;
+      width: 100%;
+      text-align: center;
+      text-decoration: none;
+      border: none;
+      border-radius: $radius;
+      font-size: 0.8rem;
+      padding: 1rem 0;
+      margin: 0.5rem;
+      font-weight: bold;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+
   .actions {
     display: flex;
     justify-content: space-between;
@@ -207,6 +232,31 @@ form {
 
     input[type='submit'] {
       @include button($primary, $white);
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+
+  .options-content {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+
+    .list-button {
+      background-color: $primary;
+      color: $white;
+      display: block;
+      width: 100%;
+      text-align: center;
+      text-decoration: none;
+      border: none;
+      border-radius: $radius;
+      font-size: 0.8rem;
+      padding: 1rem 0;
+      margin: 0.5rem;
+      font-weight: bold;
 
       &:hover {
         cursor: pointer;

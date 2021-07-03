@@ -49,40 +49,12 @@ a:hover {
   flex-wrap: wrap;
 }
 
-.container .board .item-black {
-  width: 60px;
-  height: 60px;
-  background-color: black;
-  background: -webkit-gradient(linear, left top, left bottom, from(#333333), to(#222222));
-  background: linear-gradient(#333333, #222222);
-}
-
-.container .board .item-white {
-  width: 60px;
-  height: 60px;
-  background-color: white;
-  background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#eeeeee));
-  background: linear-gradient(#ffffff, #eeeeee);
-}
-
-.container .board .red-piece {
-  width: 100%;
-  height: 100%;
-  background-image: url(../img/PieceRed.png);
-}
-
-.container .board .white-piece {
-  width: 100%;
-  height: 100%;
-  background-image: url(../img/PieceWhite.png);
-}
-
 .alert {
   color: #E87C03;
   display: block;
-  margin-bottom: .5rem;
-  padding: .2rem;
-  font-size: .8rem;
+  margin-bottom: 0.5rem;
+  padding: 0.2rem;
+  font-size: 0.8rem;
   text-align: center;
 }
 
@@ -91,13 +63,13 @@ input.invalid {
 }
 
 .logo {
-  margin-top: .5rem;
+  margin-top: 0.5rem;
   max-width: 180px;
 }
 
 @media (min-width: 768px) {
   .logo {
-    margin-top: .8rem;
+    margin-top: 0.8rem;
     margin-left: 2%;
   }
 }
@@ -105,7 +77,7 @@ input.invalid {
 @media (min-width: 768px) {
   .form-login {
     background-color: rgba(0, 0, 0, 0.85);
-    max-width: 636px;
+    max-width: 535px;
     padding: 2rem 4rem;
     margin: 1rem auto 4rem auto;
   }
@@ -123,7 +95,7 @@ section .field {
   display: -ms-flexbox;
   display: flex;
   position: relative;
-  margin-bottom: .8rem;
+  margin-bottom: 0.8rem;
 }
 
 section .field label {
@@ -131,21 +103,21 @@ section .field label {
   color: #8c8c8c;
   top: 1.1rem;
   left: 1rem;
-  font-size: .9rem;
-  -webkit-transition: font-size .2s ease, top .2s ease;
-  transition: font-size .2s ease, top .2s ease;
+  font-size: 0.9rem;
+  -webkit-transition: font-size 0.2s ease, top 0.2s ease;
+  transition: font-size 0.2s ease, top 0.2s ease;
 }
 
 section .field label.valid {
-  font-size: .6rem;
-  top: .5rem;
+  font-size: 0.6rem;
+  top: 0.5rem;
 }
 
 section .field input {
   -webkit-box-flex: 1;
   -ms-flex: 1;
   flex: 1;
-  padding: 1.3rem 1rem .7rem 1rem;
+  padding: 1.3rem 1rem 0.7rem 1rem;
   border: none;
   background-color: #323232;
   border-radius: 5px;
@@ -158,8 +130,8 @@ section .field input:focus {
 }
 
 section .field input:focus + label {
-  font-size: .6rem;
-  top: .5rem;
+  font-size: 0.6rem;
+  top: 0.5rem;
 }
 
 section .submit {
@@ -169,7 +141,7 @@ section .submit {
   margin-top: 2rem;
 }
 
-section .submit input[type="submit"] {
+section .submit input[type='submit'] {
   background-color: #E50914;
   color: #ffffff;
   display: block;
@@ -182,7 +154,35 @@ section .submit input[type="submit"] {
   padding: 1rem 0;
 }
 
-section .submit input[type="submit"]:hover {
+section .submit input[type='submit']:hover {
+  cursor: pointer;
+}
+
+section .options-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+
+section .options-content .list-button {
+  background-color: #E50914;
+  color: #ffffff;
+  display: block;
+  width: 100%;
+  text-align: center;
+  text-decoration: none;
+  border: none;
+  border-radius: 5px;
+  font-size: 0.8rem;
+  padding: 1rem 0;
+  margin: 0.5rem;
+  font-weight: bold;
+}
+
+section .options-content .list-button:hover {
   cursor: pointer;
 }
 
@@ -193,13 +193,13 @@ section .actions {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  padding: .5rem 0;
-  margin: .5rem 0 1.5rem 0;
+  padding: 0.5rem 0;
+  margin: 0.5rem 0 1.5rem 0;
 }
 
 section .actions label,
 section .actions a {
-  font-size: .8rem;
+  font-size: 0.8rem;
   text-decoration: none;
   color: #8c8c8c;
 }
@@ -216,7 +216,7 @@ form .field {
   display: -ms-flexbox;
   display: flex;
   position: relative;
-  margin-bottom: .8rem;
+  margin-bottom: 0.8rem;
 }
 
 form .field label {
@@ -224,21 +224,21 @@ form .field label {
   color: #8c8c8c;
   top: 1.1rem;
   left: 1rem;
-  font-size: .9rem;
-  -webkit-transition: font-size .2s ease, top .2s ease;
-  transition: font-size .2s ease, top .2s ease;
+  font-size: 0.9rem;
+  -webkit-transition: font-size 0.2s ease, top 0.2s ease;
+  transition: font-size 0.2s ease, top 0.2s ease;
 }
 
 form .field label.valid {
-  font-size: .6rem;
-  top: .5rem;
+  font-size: 0.6rem;
+  top: 0.5rem;
 }
 
 form .field input {
   -webkit-box-flex: 1;
   -ms-flex: 1;
   flex: 1;
-  padding: 1.3rem 1rem .7rem 1rem;
+  padding: 1.3rem 1rem 0.7rem 1rem;
   border: none;
   background-color: #323232;
   border-radius: 5px;
@@ -251,8 +251,8 @@ form .field input:focus {
 }
 
 form .field input:focus + label {
-  font-size: .6rem;
-  top: .5rem;
+  font-size: 0.6rem;
+  top: 0.5rem;
 }
 
 form .submit {
@@ -262,7 +262,7 @@ form .submit {
   margin-top: 2rem;
 }
 
-form .submit input[type="submit"] {
+form .submit input[type='submit'] {
   background-color: #E50914;
   color: #ffffff;
   display: block;
@@ -275,7 +275,35 @@ form .submit input[type="submit"] {
   padding: 1rem 0;
 }
 
-form .submit input[type="submit"]:hover {
+form .submit input[type='submit']:hover {
+  cursor: pointer;
+}
+
+form .options-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+
+form .options-content .list-button {
+  background-color: #E50914;
+  color: #ffffff;
+  display: block;
+  width: 100%;
+  text-align: center;
+  text-decoration: none;
+  border: none;
+  border-radius: 5px;
+  font-size: 0.8rem;
+  padding: 1rem 0;
+  margin: 0.5rem;
+  font-weight: bold;
+}
+
+form .options-content .list-button:hover {
   cursor: pointer;
 }
 
@@ -286,13 +314,13 @@ form .actions {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  padding: .5rem 0;
-  margin: .5rem 0 1.5rem 0;
+  padding: 0.5rem 0;
+  margin: 0.5rem 0 1.5rem 0;
 }
 
 form .actions label,
 form .actions a {
-  font-size: .8rem;
+  font-size: 0.8rem;
   text-decoration: none;
   color: #8c8c8c;
 }
@@ -308,7 +336,7 @@ form .actions a {
 }
 
 .bottom-content a {
-  font-size: .8rem;
+  font-size: 0.8rem;
 }
 
 .bottom-content .new-user {
@@ -321,7 +349,7 @@ form .actions a {
 }
 
 .bottom-content .new-user a {
-  margin-left: .5rem;
+  margin-left: 0.5rem;
   color: #8c8c8c;
   font-size: 1rem;
 }
@@ -366,9 +394,9 @@ form .actions a {
   -webkit-box-flex: 0;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
-  font-size: .8rem;
+  font-size: 0.8rem;
   margin-right: 2rem;
-  padding: .5rem 0;
+  padding: 0.5rem 0;
 }
 
 .site-footer .footer-menu a:last-of-type {
@@ -379,10 +407,34 @@ form .actions a {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  padding: .7rem 3rem;
+  padding: 0.7rem 3rem;
   border: 1px solid #8c8c8c;
   border-radius: 5px;
-  font-size: .8rem;
+  font-size: 0.8rem;
   background-color: #000000;
   color: #8c8c8c;
+}
+
+h3 {
+  text-decoration: underline;
+}
+
+hr {
+  position: absolute;
+  left: 0px;
+  width: 440px;
+}
+
+#moveBlancas {
+  position: absolute;
+  left: 500px;
+  top: 120px;
+  width: 200px;
+}
+
+#moveNegras {
+  position: absolute;
+  left: 700px;
+  top: 120px;
+  width: 200px;
 }
