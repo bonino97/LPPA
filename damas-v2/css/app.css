@@ -33,6 +33,11 @@ a:hover {
   text-decoration: underline;
 }
 
+.site-header {
+  background-color: rgba(0, 0, 0, 0.85);
+  padding: 1rem;
+}
+
 .container {
   width: 90%;
   margin: 0 auto;
@@ -63,13 +68,11 @@ input.invalid {
 }
 
 .logo {
-  margin-top: 0.5rem;
   max-width: 180px;
 }
 
 @media (min-width: 768px) {
   .logo {
-    margin-top: 0.8rem;
     margin-left: 2%;
   }
 }
