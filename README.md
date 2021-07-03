@@ -49,4 +49,4 @@
 #### Releases: 
 - v2.0.1 -> Comenzamos a añadirle JavaScript.
 - v2.0.2 -> Agregamos a manipular el DOM, para lograr mover las fichas.
-
+- v2.0.3 -> Mejoramos tablero, movemos fichas y agregamos logica del juego.
