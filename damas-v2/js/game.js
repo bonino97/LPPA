@@ -152,7 +152,7 @@ function playGame(canvaElement, moveCountElement) {
   canvasElement = canvaElement;
   canvasElement.width = pixelWidth;
   canvasElement.height = pixelHeight;
-
+  canvasElement.addEventListener('click', clickManager, false);
   moveCountElem = moveCountElement;
   drawingContext = canvasElement.getContext('2d');
 
