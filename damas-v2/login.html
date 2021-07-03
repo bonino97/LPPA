@@ -15,14 +15,44 @@
     <header class="site-header">
       <img src="img/logo.svg" alt="site logo" class="logo" />
     </header>
-    <main class="form-login container"></main>
+    <main class="form-login container">
+      <form action="#">
+        <legend>Login</legend>
+        <div class="field">
+          <input type="text" id="user" />
+          <label for="user">Email</label>
+        </div>
+        <div class="field">
+          <input type="password" id="password" />
+          <label for="password">Password</label>
+        </div>
+        <div class="submit">
+          <input type="submit" value="Iniciar Sesion" />
+        </div>
+        <div class="actions">
+          <div class="remember">
+            <input type="checkbox" />
+            <label> Remember Me</label>
+          </div>
+          <div class="help">
+            <a href="#">Need help?</a>
+          </div>
+        </div>
+      </form>
+      <div class="bottom-content">
+        <a href="contact.html" class="submit"> Contact Us</a>
+        <p class="new-user">
+          Here only to play?<a href="game.html">Play now!</a>
+        </p>
+      </div>
+    </main>
     <footer class="site-footer">
       <div class="container">
         <p>Questions? Call +54345678910</p>
         <nav class="footer-menu">
-          <a href="">Gift Terms</a>
-          <a href="">Use Terms</a>
-          <a href="">Privacy Declaration</a>
+          <a href="contact.html">Contact Us</a>
+          <a href="rules.html">Use Terms</a>
+          <a href="rules.html">Privacy Declaration</a>
         </nav>
         <select class="language">
           <option value="eng">English</option>
