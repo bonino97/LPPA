@@ -271,6 +271,8 @@ function clickOnPiece(pieceIndex) {
 }
 
 function clickOnEmptyCell(cell) {
+  document.getElementById('eatPiece').innerHTML = '';
+
   if (selectedPieceIndex === -1) {
     return;
   }
@@ -306,7 +308,7 @@ function clickOnEmptyCell(cell) {
     Math.abs(columnDiff) === 1 &&
     legalMoves[0] instanceof Jump
   ) {
-    alert('Hay saltos disponibles');
+    document.getElementById('eatPiece').innerHTML = 'You can eat!';
   } else if (
     Math.abs(rowDiff) === 2 &&
     Math.abs(columnDiff) === 2 &&
@@ -522,7 +524,7 @@ function playGame(canvaElement, moveCountElement) {
 
   saveButton = document.getElementById('resetButton');
   saveButton.onclick = newGame;
-  
+
   newGame();
 }
 
