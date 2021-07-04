@@ -358,7 +358,7 @@ function clearEndGameTexts() {
 }
 
 function showMovement(box1, box2, jump) {
-  console.log(box1, box2, jump);
+  sendDataToAPI({ box1, box2, jump });
   let movement = document.createElement('p');
   if (whiteTurn) {
     document.getElementById('whiteMove').appendChild(movement);
@@ -367,6 +367,26 @@ function showMovement(box1, box2, jump) {
     document.getElementById('redMove').appendChild(movement);
     document.getElementById('isTurn').innerHTML = 'White Turn';
   }
+}
+
+function sendDataToAPI(data) {
+  console.log(data);
+  // Make a POST request
+  fetch('https://jsonplaceholder.typicode.com/posts', {
+    method: 'POST',
+  })
+    .then(function (response) {
+      if (response.ok) {
+        return response.json();
+      }
+      return Promise.reject(response);
+    })
+    .then(function (data) {
+      console.log(data);
+    })
+    .catch(function (error) {
+      console.warn('Something went wrong.', error);
+    });
 }
 
 function checkWinner() {
