@@ -51,3 +51,5 @@
 - v2.0.2 -> Agregamos a manipular el DOM, para lograr mover las fichas.
 - v2.0.3 -> Mejoramos tablero, movemos fichas y agregamos logica del juego.
 - v2.0.4 -> Finalizada primer version del juego, con agregados en diseño.
+- v2.0.5 -> Enviamos informacion del movimiento hacia el servidor.
+- v2.0.6 -> Enviamos los comentarios recibidos hacia el servidor.
