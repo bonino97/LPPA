@@ -33,7 +33,6 @@ let gameInProgress;
 
 function drawBoard() {
   drawingContext.clearRect(0, 0, pixelWidth, pixelHeight);
-
   drawingContext.beginPath();
 
   for (let x = 0; x <= pixelWidth; x += pieceWidth) {
@@ -266,12 +265,12 @@ function clickOnPiece(pieceIndex) {
     selectedPieceHasMoved = false;
     drawBoard();
   } else {
-    alert('No es tu turno');
+    document.getElementById('isNotYourTurn').innerHTML = 'Is not your turn!';
   }
 }
 
 function clickOnEmptyCell(cell) {
-  document.getElementById('eatPiece').innerHTML = '';
+  clearInformationTexts();
 
   if (selectedPieceIndex === -1) {
     return;
@@ -343,6 +342,19 @@ function clickOnEmptyCell(cell) {
   selectedPieceIndex = -1;
   selectedPieceHasMoved = false;
   drawBoard();
+}
+
+function clearInformationTexts() {
+  document.getElementById('eatPiece').innerHTML = '';
+  document.getElementById('cannotEatPieceSameColor').innerHTML = '';
+  document.getElementById('isNotYourTurn').innerHTML = '';
+}
+
+function clearEndGameTexts() {
+  document.getElementById('isNotYourTurn').innerHTML = '';
+  document.getElementById('eatPiece').innerHTML = '';
+  document.getElementById('cannotEatPieceSameColor').innerHTML = '';
+  document.getElementById('isTurn').innerHTML = '';
 }
 
 function showMovement(box1, box2, jump) {
@@ -422,7 +434,9 @@ function isThereAPieceBetween(box1, box2) {
         existe = true;
         indexToDelete = i;
       } else {
-        alert('No puedes comer fichas de tu mismo color');
+        document.getElementById(
+          'cannotEatPieceSameColor'
+        ).innerHTML = `Can't eat piece of same color.`;
       }
     }
     i++;
@@ -503,13 +517,14 @@ function newGame() {
 }
 
 function endGame() {
+  clearEndGameTexts();
   gameInProgress = false;
   if (isTie) {
-    alert('Game over. Empate');
+    document.getElementById('endGameText').innerHTML = 'Tie!';
   } else if (whiteTurn) {
-    alert('Game over. Ganan Rojas');
+    document.getElementById('endGameText').innerHTML = 'Game Over. Red Wins!';
   } else {
-    alert('Game over. Ganan Blancas');
+    document.getElementById('endGameText').innerHTML = 'Game Over. White Wins!';
   }
   newGame();
 }
