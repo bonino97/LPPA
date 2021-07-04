@@ -137,6 +137,11 @@ section .field input:focus + label {
   top: 0.5rem;
 }
 
+section .turn {
+  text-align: center;
+  color: #c58d0c;
+}
+
 section .submit {
   display: -webkit-box;
   display: -ms-flexbox;
