@@ -22,19 +22,21 @@
       <form action="#">
         <legend>Contact Us</legend>
         <div class="field">
-          <input type="text" id="user" />
+          <input type="text" id="fullName" name="fullName" />
           <label for="user">Full Name</label>
         </div>
         <div class="field">
-          <input type="text" id="user" />
+          <input type="text" id="email" name="email" />
           <label for="user">Email</label>
         </div>
         <div class="field">
-          <textarea id="user" cols="10" rows="10"></textarea>
+          <textarea id="comment" name="comment" cols="10" rows="10"></textarea>
           <label for="user">Comment</label>
         </div>
         <div class="submit">
-          <input type="submit" value="Send Comment" />
+          <button class="list-button" onclick="sendComment()" type="button">
+            Send Comment
+          </button>
         </div>
       </form>
     </main>
@@ -52,5 +54,6 @@
         </select>
       </div>
     </footer>
+    <script src="js/contact.js"></script>
   </body>
 </html>
