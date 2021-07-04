@@ -96,7 +96,7 @@ function drawQueen(p, color, selected) {
   drawingContext.closePath();
   drawingContext.fillStyle = color;
   drawingContext.fill();
-  drawingContext.strokeStyle = '#000';
+  drawingContext.strokeStyle = '#454545';
   drawingContext.stroke();
 
   if (selected) {
@@ -106,7 +106,7 @@ function drawQueen(p, color, selected) {
   drawingContext.beginPath();
   drawingContext.arc(x, y, radius + 2.5, 0, Math.PI * 2, false);
   drawingContext.closePath();
-  drawingContext.strokeStyle = '#000';
+  drawingContext.strokeStyle = '#454545';
   drawingContext.stroke();
 }
 
