@@ -75,7 +75,7 @@ function drawPiece(p, color, selected) {
   drawingContext.closePath();
   drawingContext.fillStyle = color;
   drawingContext.fill();
-  drawingContext.strokeStyle = '#000';
+  drawingContext.strokeStyle = '#454545';
   drawingContext.stroke();
 
   if (selected) {
