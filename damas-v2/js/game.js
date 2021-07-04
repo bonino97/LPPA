@@ -348,6 +348,7 @@ function clearInformationTexts() {
   document.getElementById('eatPiece').innerHTML = '';
   document.getElementById('cannotEatPieceSameColor').innerHTML = '';
   document.getElementById('isNotYourTurn').innerHTML = '';
+  document.getElementById('endGameText').innerHTML = '';
 }
 
 function clearEndGameTexts() {
