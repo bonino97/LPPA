@@ -63,9 +63,17 @@
         </h1>
         <h2 class="turn" id="eatPiece"></h2>
         <h2 class="turn" id="cannotEatPieceSameColor"></h2>
-        <p id="movements" style="display: none">
-          Movements: <span id="count">0</span>
-        </p>
+
+        <div id="moveAndPoints" style="display: none">
+          <p id="movements">Movements: <span id="count">0</span></p>
+          <p id="playerOnePoints">
+            Player One Points: <span id="playerOnePointsCount">0</span>
+          </p>
+          <p id="playerTwoPoints">
+            Player Two Points: <span id="playerTwoPointsCount">0</span>
+          </p>
+        </div>
+
         <div id="whiteMove"></div>
         <div id="redMove"></div>
         <div class="options-content" id="newGame" style="display: none">

@@ -496,6 +496,12 @@ form .actions a {
   }
 }
 
+@media (min-width: 1200px) {
+  .site-footer {
+    padding: 1rem 0 10rem 0;
+  }
+}
+
 @media (min-width: 768px) {
   .site-footer .container {
     max-width: 50%;

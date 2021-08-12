@@ -167,7 +167,6 @@ section {
       }
     }
 
-
     .player-two-label {
       position: absolute;
       color: $lightGray;
@@ -432,6 +431,10 @@ form {
     border-top: unset;
     background-color: rgba(0, 0, 0, 0.85);
     padding: 1rem 0 1.5rem 0;
+  }
+
+  @include desktop {
+    padding: 1rem 0 10rem 0;
   }
 
   .container {

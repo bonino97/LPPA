@@ -31,6 +31,9 @@ let moveCount;
 let moveCountElem;
 let gameInProgress;
 
+let playerOnePoints = 0;
+let playerTwoPoints = 0;
+
 function drawBoard() {
   drawingContext.clearRect(0, 0, pixelWidth, pixelHeight);
   drawingContext.beginPath();
@@ -364,9 +367,20 @@ function showMovement(box1, box2, jump) {
   // sendDataToAPI({ box1, box2, jump });
   let movement = document.createElement('p');
   if (whiteTurn) {
+    if (jump) {
+      playerOnePoints += 10;
+      document.getElementById('playerOnePointsCount').innerHTML =
+        playerOnePoints;
+    }
+
     document.getElementById('whiteMove').appendChild(movement);
     document.getElementById('isTurn').innerHTML = `Player: ${playerTwo} moves!`;
   } else {
+    if (jump) {
+      playerTwoPoints += 10;
+      document.getElementById('playerTwoPointsCount').innerHTML =
+        playerTwoPoints;
+    }
     document.getElementById('redMove').appendChild(movement);
     document.getElementById('isTurn').innerHTML = `Player: ${playerOne} moves!`;
   }
@@ -516,7 +530,7 @@ function getPlayersNames() {
     document.getElementById(
       'isTurn'
     ).innerHTML = `Player: ${playerOne} Starts!`;
-    document.getElementById('movements').style.display = '';
+    document.getElementById('moveAndPoints').style.display = '';
     document.getElementById('newGame').style.display = '';
     document.getElementById('canvas').style.display = '';
     playGame(
@@ -528,6 +542,8 @@ function getPlayersNames() {
 
 function newGame() {
   numMoves = 0;
+  playerOnePoints = 0;
+  playerTwoPoints = 0;
   numPieces = 24;
   whiteTurn = true;
   redTurn = false;
