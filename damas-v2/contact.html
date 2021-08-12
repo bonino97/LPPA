@@ -10,7 +10,6 @@
       href="https://necolas.github.io/normalize.css/8.0.1/normalize.css"
     />
     <link rel="stylesheet" href="css/app.css" />
-    <script src="js/forms.js"></script>
   </head>
   <body>
     <header class="site-header">
@@ -19,14 +18,14 @@
       /></a>
     </header>
     <main class="form-login container">
-      <form action="#">
+      <form name="contactForm" action="#">
         <legend>Contact Us</legend>
         <div class="field">
           <input type="text" id="fullName" name="fullName" />
           <label for="user">Full Name</label>
         </div>
         <div class="field">
-          <input type="text" id="email" name="email" />
+          <input type="email" id="email" name="email" />
           <label for="user">Email</label>
         </div>
         <div class="field">
@@ -58,5 +57,6 @@
       </div>
     </footer>
     <script src="js/contact.js"></script>
+    <script src="js/forms.js"></script>
   </body>
 </html>

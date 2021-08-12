@@ -66,6 +66,10 @@ input.invalid {
   border-bottom: 3px solid #E87C03 !important;
 }
 
+textarea.invalid {
+  border-bottom: 3px solid #E87C03 !important;
+}
+
 .logo {
   max-width: 180px;
 }

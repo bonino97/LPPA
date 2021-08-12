@@ -1,7 +1,7 @@
 // Validate form.
 
 const inputs = document.querySelectorAll('form .field input');
-
+const textarea = document.getElementById('comment');
 // Listener in inputs.
 // Dont forget to use on register.
 
@@ -12,6 +12,9 @@ inputs.forEach((input) => {
 inputs.forEach((input) => {
   input.addEventListener('input', validateInput);
 });
+
+textarea.addEventListener('blur', validateInput);
+textarea.addEventListener('input', validateInput);
 
 function validateInput(e) {
   const status = ['valid', 'invalid'];

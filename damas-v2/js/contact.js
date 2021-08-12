@@ -2,31 +2,29 @@ function sendComment() {
   let fullName = document.getElementById('fullName').value;
   let email = document.getElementById('email').value;
   let comment = document.getElementById('comment').value;
+  validateCommentLength();
+  validateEmail(email);
+  window.location.href = `mailto:${email}?subject='Hey im ${fullName}'&body=${comment}`;
+}
 
-  const data = {
-    fullName,
-    email,
-    comment,
-  };
+function validateCommentLength() {
+  let comment = document.forms['contactForm']['comment'].value;
 
-  window.location.href = `mailto:${email}?subject=Hey im ${fullName}&body=${comment}`;
+  if (comment.length <= 5) {
+    alert('Comment need to have more than 5 characters.');
+    return false;
+  }
 
-  target = '_blank';
+  if (comment.length <= 5) {
+    alert('Comment need to have more than 5 characters.');
+    return false;
+  }
+}
 
-  // Make a POST request
-  // fetch('https://jsonplaceholder.typicode.com/posts', {
-  //   method: 'POST',
-  // })
-  //   .then(function (response) {
-  //     if (response.ok) {
-  //       return response.json();
-  //     }
-  //     return Promise.reject(response);
-  //   })
-  //   .then(function (data) {
-  //     console.log(data);
-  //   })
-  //   .catch(function (error) {
-  //     console.warn('Something went wrong.', error);
-  //   });
+function validateEmail(email) {
+  if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)) {
+    return true;
+  }
+  alert('You have entered an invalid email address!');
+  return false;
 }
