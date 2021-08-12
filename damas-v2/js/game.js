@@ -544,6 +544,8 @@ function newGame() {
   numMoves = 0;
   playerOnePoints = 0;
   playerTwoPoints = 0;
+  document.getElementById('playerOnePointsCount').innerHTML = playerOnePoints;
+  document.getElementById('playerTwoPointsCount').innerHTML = playerTwoPoints;
   numPieces = 24;
   whiteTurn = true;
   redTurn = false;
@@ -619,7 +621,6 @@ function saveGame() {
 
 function loadGame() {
   pieces = [];
-  console.log('im here');
   numPieces = parseInt(localStorage.getItem('numPiezas'));
   moveCount = parseInt(localStorage.getItem('numMove'));
 
