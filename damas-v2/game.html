@@ -21,16 +21,51 @@
     <main class="form-login container">
       <section class="content">
         <legend>Play Game!</legend>
-        <h2 class="turn" id="isTurn">White Start</h2>
-        <canvas id="canvas" width="600" height="300"></canvas>
+        <div id="playerFields">
+          <div class="player-fields">
+            <input
+              class="player-one-input"
+              type="text"
+              id="playerOne"
+              name="playerOne"
+            />
+            <label class="player-one-label" for="playerOne">Player 1</label>
+            <input
+              class="player-two-input"
+              type="text"
+              id="playerTwo"
+              name="playerTwo"
+            />
+            <label class="player-two-label" for="playerTwo">Player 2</label>
+          </div>
+          <div class="options-content">
+            <button
+              class="list-button"
+              id="getPlayersButton"
+              onclick="getPlayersNames()"
+            >
+              Load Players
+            </button>
+          </div>
+        </div>
+
+        <h2 class="turn" id="isTurn"></h2>
+        <canvas
+          id="canvas"
+          width="600"
+          height="300"
+          style="display: none"
+        ></canvas>
         <h2 class="turn" id="isNotYourTurn"></h2>
         <h1 class="turn" id="endGameText"></h1>
         <h2 class="turn" id="eatPiece"></h2>
         <h2 class="turn" id="cannotEatPieceSameColor"></h2>
-        <p>Movements: <span id="count">0</span></p>
+        <p id="movements" style="display: none">
+          Movements: <span id="count">0</span>
+        </p>
         <div id="whiteMove"></div>
         <div id="redMove"></div>
-        <div class="options-content">
+        <div class="options-content" id="newGame" style="display: none">
           <button class="list-button" id="resetButton">New Game</button>
         </div>
       </section>
@@ -40,7 +75,7 @@
         <p>Questions? Call +54345678910</p>
         <nav class="footer-menu">
           <a href="contact.html">Contact Us</a>
-          <a href="rules.html">Use Terms</a>
+          <a href="history.html">Use Terms</a>
           <a href="register.html">Register now</a>
         </nav>
         <select class="language">
@@ -49,11 +84,6 @@
         </select>
       </div>
     </footer>
-    <script>
-      playGame(
-        document.getElementById('canvas'),
-        document.getElementById('count')
-      );
-    </script>
+    <script></script>
   </body>
 </html>

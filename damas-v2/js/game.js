@@ -254,6 +254,7 @@ function clickManager(e) {
 }
 
 function clickOnPiece(pieceIndex) {
+  document.getElementById('isNotYourTurn').innerHTML = '';
   if (
     (whiteTurn && pieces[pieceIndex].color === whitePieceColor) ||
     (redTurn && pieces[pieceIndex].color === redPieceColor)
@@ -347,8 +348,8 @@ function clickOnEmptyCell(cell) {
 function clearInformationTexts() {
   document.getElementById('eatPiece').innerHTML = '';
   document.getElementById('cannotEatPieceSameColor').innerHTML = '';
-  document.getElementById('isNotYourTurn').innerHTML = '';
   document.getElementById('endGameText').innerHTML = '';
+  document.getElementById('isTurn').innerHTML = '';
 }
 
 function clearEndGameTexts() {
@@ -359,14 +360,16 @@ function clearEndGameTexts() {
 }
 
 function showMovement(box1, box2, jump) {
-  sendDataToAPI({ box1, box2, jump });
+  let playerOne = localStorage.getItem('playerOne');
+  let playerTwo = localStorage.getItem('playerTwo');
+  // sendDataToAPI({ box1, box2, jump });
   let movement = document.createElement('p');
   if (whiteTurn) {
     document.getElementById('whiteMove').appendChild(movement);
-    document.getElementById('isTurn').innerHTML = 'Red Turn';
+    document.getElementById('isTurn').innerHTML = `Player: ${playerTwo} moves!`;
   } else {
     document.getElementById('redMove').appendChild(movement);
-    document.getElementById('isTurn').innerHTML = 'White Turn';
+    document.getElementById('isTurn').innerHTML = `Player: ${playerOne} moves!`;
   }
 }
 
@@ -504,6 +507,26 @@ function winner(piece) {
   pieces.push(new Queen(piece.row, piece.column, piece.color));
 }
 
+function getPlayersNames() {
+  let playerOne = document.getElementById('playerOne').value;
+  let playerTwo = document.getElementById('playerTwo').value;
+
+  if (playerOne && playerTwo) {
+    localStorage.setItem('playerOne', playerOne);
+    localStorage.setItem('playerTwo', playerTwo);
+    document.getElementById(
+      'isTurn'
+    ).innerHTML = `Player: ${playerOne} Starts!`;
+    document.getElementById('movements').style.display = '';
+    document.getElementById('newGame').style.display = '';
+    document.getElementById('canvas').style.display = '';
+    playGame(
+      document.getElementById('canvas'),
+      document.getElementById('count')
+    );
+  }
+}
+
 function newGame() {
   numMoves = 0;
   numPieces = 24;
@@ -539,18 +562,27 @@ function newGame() {
 
 function endGame() {
   clearEndGameTexts();
+  let playerOne = localStorage.getItem('playerOne');
+  let playerTwo = localStorage.getItem('playerTwo');
   gameInProgress = false;
   if (isTie) {
     document.getElementById('endGameText').innerHTML = 'Tie!';
   } else if (whiteTurn) {
-    document.getElementById('endGameText').innerHTML = 'Game Over. Red Wins!';
+    document.getElementById(
+      'endGameText'
+    ).innerHTML = `Game Over. Player ${playerTwo} Wins!`;
   } else {
-    document.getElementById('endGameText').innerHTML = 'Game Over. White Wins!';
+    document.getElementById(
+      'endGameText'
+    ).innerHTML = `Game Over. Player ${playerOne} Wins!`;
   }
   newGame();
 }
 
 function playGame(canvaElement, moveCountElement) {
+  document.getElementById('playerFields').style.display = 'none';
+  document.getElementById('getPlayersButton').style.display = 'none';
+
   canvasElement = canvaElement;
   canvasElement.width = pixelWidth;
   canvasElement.height = pixelHeight;

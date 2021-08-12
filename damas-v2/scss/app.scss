@@ -17,7 +17,6 @@ body {
   color: $blueGray;
 
   @include tablet {
-    background-color: unset;
     background-image: url('../img/bg.jpg');
     background-repeat: no-repeat;
     background-size: cover;
@@ -124,6 +123,81 @@ section {
         + label {
           font-size: 0.6rem;
           top: 0.5rem;
+        }
+      }
+    }
+  }
+
+  .player-fields {
+    display: flex;
+    position: relative;
+    margin-bottom: 0.8rem;
+
+    .player-one-label {
+      position: absolute;
+      color: $lightGray;
+      top: 1.1rem;
+      left: 1rem;
+      font-size: 0.9rem;
+      transition: font-size 0.2s ease, top 0.2s ease;
+
+      &.valid {
+        font-size: 0.6rem;
+        top: 0.5rem;
+      }
+    }
+
+    .player-one-input {
+      flex: 1;
+      padding: 1.3rem 1rem 0.7rem 1rem;
+      border: none;
+      background-color: $gray;
+      border-radius: $radius;
+      color: $white;
+      margin-right: 0.5rem;
+
+      &:focus {
+        background-color: $blueGray;
+        outline: none;
+
+        + label {
+          font-size: 0.6rem;
+          top: 0.5rem;
+        }
+      }
+    }
+
+
+    .player-two-label {
+      position: absolute;
+      color: $lightGray;
+      top: 1.1rem;
+      left: 14rem;
+      font-size: 0.9rem;
+      transition: font-size 0.2s ease, top 0.2s ease;
+
+      &.valid {
+        font-size: 0.6rem;
+        top: 0.5rem;
+      }
+    }
+
+    .player-two-input {
+      flex: 1;
+      padding: 1.3rem 1rem 0.7rem 1rem;
+      border: none;
+      background-color: $gray;
+      border-radius: $radius;
+      color: $white;
+
+      &:focus {
+        background-color: $blueGray;
+        outline: none;
+
+        + label {
+          font-size: 0.6rem;
+          top: 0.5rem;
+          left: 14rem;
         }
       }
     }

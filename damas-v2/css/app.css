@@ -16,7 +16,6 @@ body {
 
 @media (min-width: 768px) {
   body {
-    background-color: unset;
     background-image: url("../img/bg.jpg");
     background-repeat: no-repeat;
     background-size: cover;
@@ -135,6 +134,88 @@ section .field input:focus {
 section .field input:focus + label {
   font-size: 0.6rem;
   top: 0.5rem;
+}
+
+section .player-fields {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  margin-bottom: 0.8rem;
+}
+
+section .player-fields .player-one-label {
+  position: absolute;
+  color: #8c8c8c;
+  top: 1.1rem;
+  left: 1rem;
+  font-size: 0.9rem;
+  -webkit-transition: font-size 0.2s ease, top 0.2s ease;
+  transition: font-size 0.2s ease, top 0.2s ease;
+}
+
+section .player-fields .player-one-label.valid {
+  font-size: 0.6rem;
+  top: 0.5rem;
+}
+
+section .player-fields .player-one-input {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  padding: 1.3rem 1rem 0.7rem 1rem;
+  border: none;
+  background-color: #323232;
+  border-radius: 5px;
+  color: #ffffff;
+  margin-right: 0.5rem;
+}
+
+section .player-fields .player-one-input:focus {
+  background-color: #454545;
+  outline: none;
+}
+
+section .player-fields .player-one-input:focus + label {
+  font-size: 0.6rem;
+  top: 0.5rem;
+}
+
+section .player-fields .player-two-label {
+  position: absolute;
+  color: #8c8c8c;
+  top: 1.1rem;
+  left: 14rem;
+  font-size: 0.9rem;
+  -webkit-transition: font-size 0.2s ease, top 0.2s ease;
+  transition: font-size 0.2s ease, top 0.2s ease;
+}
+
+section .player-fields .player-two-label.valid {
+  font-size: 0.6rem;
+  top: 0.5rem;
+}
+
+section .player-fields .player-two-input {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  padding: 1.3rem 1rem 0.7rem 1rem;
+  border: none;
+  background-color: #323232;
+  border-radius: 5px;
+  color: #ffffff;
+}
+
+section .player-fields .player-two-input:focus {
+  background-color: #454545;
+  outline: none;
+}
+
+section .player-fields .player-two-input:focus + label {
+  font-size: 0.6rem;
+  top: 0.5rem;
+  left: 14rem;
 }
 
 section .turn {
