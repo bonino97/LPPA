@@ -58,6 +58,7 @@
         ></canvas>
         <h2 class="turn" id="isNotYourTurn"></h2>
         <h1 class="turn" id="endGameText"></h1>
+        <h1 class="turn" id="tieText" style="display: none;">Tie! Play again.</h1>
         <h2 class="turn" id="eatPiece"></h2>
         <h2 class="turn" id="cannotEatPieceSameColor"></h2>
         <p id="movements" style="display: none">
@@ -67,6 +68,12 @@
         <div id="redMove"></div>
         <div class="options-content" id="newGame" style="display: none">
           <button class="list-button" id="resetButton">New Game</button>
+          <button class="list-button" onclick="saveGame()" id="saveButton">
+            Save Game
+          </button>
+          <button class="list-button" onclick="loadGame()" id="loadButton">
+            Load Game
+          </button>
         </div>
       </section>
     </main>

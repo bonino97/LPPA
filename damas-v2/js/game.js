@@ -271,6 +271,7 @@ function clickOnPiece(pieceIndex) {
 }
 
 function clickOnEmptyCell(cell) {
+  checkTie();
   clearInformationTexts();
 
   if (selectedPieceIndex === -1) {
@@ -301,7 +302,6 @@ function clickOnEmptyCell(cell) {
     selectedPieceHasMoved = false;
     drawBoard();
     numMoves += 1;
-    checkTie();
     return;
   } else if (
     rowDiff === 1 &&
@@ -335,7 +335,6 @@ function clickOnEmptyCell(cell) {
     selectedPieceIndex = -1;
     selectedPieceHasMoved = false;
 
-    numMoves = 0;
     changeTurn();
     drawBoard();
     return;
@@ -475,7 +474,7 @@ function removePiece() {
 }
 
 function checkTie() {
-  if (numMoves >= 50 || tieAgreed) {
+  if (numMoves >= 20) {
     isTie = true;
     endGame();
   }
@@ -566,7 +565,7 @@ function endGame() {
   let playerTwo = localStorage.getItem('playerTwo');
   gameInProgress = false;
   if (isTie) {
-    document.getElementById('endGameText').innerHTML = 'Tie!';
+    document.getElementById('tieText').style.display = '';
   } else if (whiteTurn) {
     document.getElementById(
       'endGameText'
@@ -579,6 +578,55 @@ function endGame() {
   newGame();
 }
 
+function saveGame() {
+  for (var i = 0; i < numPieces; i++) {
+    localStorage.removeItem('piece' + i + '.row');
+    localStorage.removeItem('piece' + i + '.column');
+    localStorage.removeItem('piece' + i + '.color');
+  }
+
+  localStorage.setItem('numMove', moveCount);
+
+  numPieces = pieces.length;
+  localStorage.setItem('numPiezas', numPieces);
+  if (whiteTurn) {
+    localStorage.setItem('isTurn', 'playerOne');
+  } else {
+    localStorage.setItem('isTurn', 'playerTwo');
+  }
+  for (var i = 0; i < pieces.length; i++) {
+    localStorage.setItem('piece' + i + '.row', pieces[i].row);
+    localStorage.setItem('piece' + i + '.column', pieces[i].column);
+    localStorage.setItem('piece' + i + '.color', pieces[i].color);
+  }
+}
+
+function loadGame() {
+  pieces = [];
+  console.log('im here');
+  numPieces = parseInt(localStorage.getItem('numPiezas'));
+  moveCount = parseInt(localStorage.getItem('numMove'));
+
+  for (var i = 0; i < numPieces; i++) {
+    var row = parseInt(localStorage.getItem('piece' + i + '.row'));
+    var column = parseInt(localStorage.getItem('piece' + i + '.column'));
+    var color = localStorage.getItem('piece' + i + '.color');
+    if (!(color === 'null') && pieces.length < 24) {
+      pieces.push(new Box(row, column, color));
+    }
+  }
+
+  if (parseInt(localStorage.getItem('isTurn')) == 'playerOne') {
+    whiteTurn = true;
+    redTurn = false;
+  } else {
+    whiteTurn = false;
+    redTurn = true;
+  }
+
+  drawBoard();
+}
+
 function playGame(canvaElement, moveCountElement) {
   document.getElementById('playerFields').style.display = 'none';
   document.getElementById('getPlayersButton').style.display = 'none';
@@ -589,6 +637,12 @@ function playGame(canvaElement, moveCountElement) {
   canvasElement.addEventListener('click', clickManager, false);
   moveCountElem = moveCountElement;
   drawingContext = canvasElement.getContext('2d');
+
+  loadButton = document.getElementById('loadButton');
+  loadButton.onclick = loadGame;
+
+  saveButton = document.getElementById('saveButton');
+  saveButton.onclick = saveGame;
 
   saveButton = document.getElementById('resetButton');
   saveButton.onclick = newGame;
