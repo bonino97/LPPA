@@ -8,22 +8,25 @@ function sendComment() {
     email,
     comment,
   };
-  
-  console.log(data);
+
+  window.location.href = `mailto:${email}?subject=Hey im ${fullName}&body=${comment}`;
+
+  target = '_blank';
+
   // Make a POST request
-  fetch('https://jsonplaceholder.typicode.com/posts', {
-    method: 'POST',
-  })
-    .then(function (response) {
-      if (response.ok) {
-        return response.json();
-      }
-      return Promise.reject(response);
-    })
-    .then(function (data) {
-      console.log(data);
-    })
-    .catch(function (error) {
-      console.warn('Something went wrong.', error);
-    });
+  // fetch('https://jsonplaceholder.typicode.com/posts', {
+  //   method: 'POST',
+  // })
+  //   .then(function (response) {
+  //     if (response.ok) {
+  //       return response.json();
+  //     }
+  //     return Promise.reject(response);
+  //   })
+  //   .then(function (data) {
+  //     console.log(data);
+  //   })
+  //   .catch(function (error) {
+  //     console.warn('Something went wrong.', error);
+  //   });
 }
