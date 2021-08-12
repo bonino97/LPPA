@@ -34,6 +34,10 @@ let gameInProgress;
 let playerOnePoints = 0;
 let playerTwoPoints = 0;
 
+let gamesHistory = localStorage.getItem('gamesHistory')
+  ? JSON.parse(localStorage.getItem('gamesHistory'))
+  : [];
+
 function drawBoard() {
   drawingContext.clearRect(0, 0, pixelWidth, pixelHeight);
   drawingContext.beginPath();
@@ -488,7 +492,7 @@ function removePiece() {
 }
 
 function checkTie() {
-  if (numMoves >= 20) {
+  if (numMoves >= 40) {
     isTie = true;
     endGame();
   }
@@ -588,11 +592,24 @@ function endGame() {
     document.getElementById(
       'endGameText'
     ).innerHTML = `Game Over. Player ${playerTwo} Wins!`;
+    gamesHistory.push({
+      player: playerTwo,
+      points: playerTwoPoints,
+      date: new Date(),
+    });
+    localStorage.setItem('gamesHistory', JSON.stringify(gamesHistory));
   } else {
     document.getElementById(
       'endGameText'
     ).innerHTML = `Game Over. Player ${playerOne} Wins!`;
+    gamesHistory.push({
+      player: playerOne,
+      points: playerOnePoints,
+      date: new Date(),
+    });
+    localStorage.setItem('gamesHistory', JSON.stringify(gamesHistory));
   }
+
   newGame();
 }
 

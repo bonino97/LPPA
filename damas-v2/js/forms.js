@@ -13,8 +13,8 @@ inputs.forEach((input) => {
   input.addEventListener('input', validateInput);
 });
 
-textarea.addEventListener('blur', validateInput);
-textarea.addEventListener('input', validateInput);
+textarea?.addEventListener('blur', validateInput);
+textarea?.addEventListener('input', validateInput);
 
 function validateInput(e) {
   const status = ['valid', 'invalid'];
